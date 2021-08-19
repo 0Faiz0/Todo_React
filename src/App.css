@@ -1,38 +1,180 @@
-.App {
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: #28282B;
+}
+
+.head{
+  width: 100%;
+}
+
+.head h1{
   text-align: center;
+  width: 30%;
+  display: block;
+  color: #ffffff;
+  padding: 5px;
+  margin: 20px auto;
+  box-shadow: 3px 5px #ccf500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 span{
+  color: #ccf500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  position: relative;
+  width: 100%;
+}
+
+form{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 50px;
+}
+
+form input{
+  width: 75%;
+}
+
+form input,
+form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 2rem;
+  background-color: white;
+}
+
+form button .icon{
+  display: block;
+  margin: auto;
+  background-color: transparent;
+}
+
+form button {
+  width: 15%;
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: yellow;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form .select select{
+  padding: 0.6rem;
+  font-size: 2rem;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.todo li{
+  list-style-type: none;
+  width: 40%;
+  height: 50px;
+  padding: 5px;
+  background-color: aquamarine;
+  font-size: 1.5rem;
+  color: black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.todo .done{
+  background-color: #e31837;
+}
+
+.todo .delete{
+  background-color: #e31837;
+}
+
+.todo button{
+  border: none;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 10%;
+  height: 50px;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.todo .done{
+  border-left: 4px solid yellow;
+  border-right: 2px solid yellow;
+}
+
+.todo .delete{
+  border-left: 2px solid yellow;
+  border-right: 4px solid yellow;
+}
+
+.todo button .check-icon{
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.todo button .delete-icon{
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.todo button:hover {
+  background: black;
+}
+
+
+@media screen and (max-width: 500px) {
+form input,
+form button {
+  font-size: 1.2rem;
+}   
+
+.todo li{
+  list-style-type: none;
+  width: 55%;
+  height: 35px;
+  font-size: 1rem;
+}
+
+.todo button .check-icon{
+  font-size: 1rem;
+}
+
+.todo button .delete-icon{
+  font-size: 1rem;
+}
+
+.todo button{
+  width: 10%;
+  font-size: 1rem;
+  height: 35px;
+}
+
+form input{
+  width: 100%;
+}
+
+form button{
+  width: 15%;
+}
 }
